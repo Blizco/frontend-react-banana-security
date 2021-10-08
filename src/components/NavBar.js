@@ -7,7 +7,7 @@ function NavBar() {
     const history = useHistory();
     const {isAuthorized, logOutFunction} = useContext(AuthContext);
 
-    // console.log(isAuthorized);
+    console.log(`isAuthorized is: ${isAuthorized}`);
 
     return (
         <nav>
