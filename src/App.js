@@ -5,6 +5,7 @@ import Profile from './pages/Profile';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import PrivateRoute from "./components/PrivateRoute";
 import './App.css';
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/profile">
+          <PrivateRoute exact path="/profile">
             <Profile />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/signin">
             <SignIn />
           </Route>
