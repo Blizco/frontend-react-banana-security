@@ -37,7 +37,8 @@ function SignIn() {
                     />
                 </section>
                 <button type="button"
-                        onClick={logInFunction}
+                        onClick={() => logInFunction(emailAddress)}
+
                 >
                     Inloggen
                 </button>

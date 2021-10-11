@@ -7,7 +7,11 @@ function NavBar() {
     const history = useHistory();
     const {isAuthorized, logOutFunction} = useContext(AuthContext);
 
-    console.log(`isAuthorized is: ${isAuthorized}`);
+    // console.log(`isAuthorized is: ${isAuthorized}`);
+
+    // Nu met object (bonusopdracht 2)
+    console.log(`Gebruiker is: ${isAuthorized.user}`);
+
 
     return (
         <nav>
@@ -21,7 +25,9 @@ function NavBar() {
             </Link>
             {/*Afhankelijk van status verschillende buttons laten zien*/}
             <div>
-                {isAuthorized
+                {/*{isAuthorizedUser.isAuth*/}
+                {isAuthorized.isAuth
+
                     // Alleen "Log uit" button laten zien wanneer true
                     ? <div>
                         <button
